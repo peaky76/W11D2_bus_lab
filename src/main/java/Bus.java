@@ -30,4 +30,8 @@ public class Bus {
         int index = this.passengers.indexOf(passenger);
         this.passengers.remove(index);
     }
+
+    public void pickUp(Person passenger, BusStop busStop) {
+        this.passengers.add(busStop.removePersonFromQueue(passenger));
+    }
 }
