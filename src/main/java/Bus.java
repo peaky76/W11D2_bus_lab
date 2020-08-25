@@ -15,4 +15,8 @@ public class Bus {
     public int getNumberOfPassengers() {
         return this.passengers.size();
     }
+
+    public void addPassenger(Person passenger) {
+        this.passengers.add(passenger);
+    }
 }

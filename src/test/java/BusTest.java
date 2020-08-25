@@ -19,5 +19,12 @@ public class BusTest {
         assertEquals(0, bus.getNumberOfPassengers());
     }
 
+    @Test
+    public void canAddPassengerIfNotFull() {
+        bus.addPassenger(passenger);
+        assertEquals(1, bus.getNumberOfPassengers());
+    }
+
+
 
 }
