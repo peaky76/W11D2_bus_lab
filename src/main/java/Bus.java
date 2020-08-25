@@ -17,6 +17,17 @@ public class Bus {
     }
 
     public void addPassenger(Person passenger) {
-        this.passengers.add(passenger);
+        if (isNotFull()) {
+            this.passengers.add(passenger);
+        }
+    }
+
+    public boolean isNotFull() {
+        return getNumberOfPassengers() < capacity;
+    }
+
+    public void removePassenger(Person passenger) {
+        int index = this.passengers.indexOf(passenger);
+        this.passengers.remove(index);
     }
 }

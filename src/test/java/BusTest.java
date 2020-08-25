@@ -25,6 +25,22 @@ public class BusTest {
         assertEquals(1, bus.getNumberOfPassengers());
     }
 
+    @Test
+    public void doesNotAddPassengerIfBusIsFull() {
+        for (int i= 0; i < 80; i ++){
+            bus.addPassenger(passenger);
+        }
+        bus.addPassenger(passenger);
+        assertEquals(80, bus.getNumberOfPassengers());
+    }
+
+    @Test
+    public void canRemovePassenger() {
+        bus.addPassenger(passenger);
+        bus.removePassenger(passenger);
+        assertEquals(0, bus.getNumberOfPassengers());
+    }
+
 
 
 }
